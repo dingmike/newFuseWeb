@@ -18,7 +18,7 @@ const questions = [
   {
     name: 'NAME',
     type: 'input',
-    default: 'Watosan',
+    default: '英文能力',
     message: 'Blog name'
   },
   {

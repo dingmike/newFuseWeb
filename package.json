@@ -1,7 +1,7 @@
 {
-  "name": "watosan.org",
+  "name": "fecstec.com",
   "version": "1.0.0",
-  "description": "fullstack blog",
+  "description": "fuse tec",
   "main": "./.backend/main.js",
   "scripts": {
     "dev": "backpack dev",

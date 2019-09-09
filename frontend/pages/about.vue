@@ -3,12 +3,12 @@
     <h1>About me</h1>
 
     <p>
-      My name is Victor Novikov and I am a frontend developer. At least, I think
+      My name is Mikeding and I am a frontend developer. At least, I think
       what I am a frontend developer. A have been doing web development since 2011
-      (PHP, JS, HTML and so on). This is my first personal blog about development
+      (Java, JS, HTML5 and so on). This is my first personal blog about development
       and anything else I find time to write about. I currently work as a
-      full-stack developer at a small company. I live in Russia, in a small city.
-      In my free time, I draw in various styles (pencil, pixel art).
+      full-stack developer at a small company. I live in China, in a small city.
+      In my free time, I learn English.
     </p>
 
     <p>
@@ -21,7 +21,7 @@
     </p>
 
     <p>
-      Want to contact me? You can reach me at mydesireiscoma at outlook dot com.
+      Want to contact me? You can reach me at wechat newscnn.
     </p>
   </article>
 </template>
