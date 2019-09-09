@@ -5,7 +5,7 @@
   "main": "./.backend/main.js",
   "scripts": {
     "dev": "backpack dev",
-    "start": "cross-env NODE_ENV=production pm2 start ./.backend/main.js -i max",
+    "start": "cross-env NODE_ENV=production pm2 start ./.backend/main.js -i min",
     "build": "run-p server:build client:build",
     "server:build": "cross-env NODE_ENV=production backpack build",
     "client:build": "cross-env NODE_ENV=production nuxt build",

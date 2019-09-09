@@ -23,10 +23,13 @@ module.exports = {
       }
     },
     async resolve (root, data, { user }) {
+      console.log(data)
+      console.log(user)
       if (!user) {
         throw new ForbiddenError('Unauthorized')
       }
-
+      console.log(data)
+      console.log(user)
       const { stream, mimetype, encoding } = await data.file
 
       const uploadsDir = path.join(__dirname, '../..', 'uploads')
