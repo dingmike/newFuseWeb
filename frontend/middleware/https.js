@@ -6,6 +6,7 @@
  * @returns {*}
  */
 export default ({ isDev, req, redirect }) => {
+  // 生產環境强制跳轉https
   if (!isDev && req) {
     const encrypted = req.headers['x-forwarded-proto'] === 'https' || req.connection.encrypted
 
