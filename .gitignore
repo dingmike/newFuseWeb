@@ -1,0 +1,25 @@
+# IDE / Code editor
+.idea
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# NPM cache directory
+.npm
+
+# ESLint cache
+.eslintcache
+
+# DotEnv environment variables file
+.env
+
+# Project
+.nuxt/
+.backend/
+frontend/static/sw.js
