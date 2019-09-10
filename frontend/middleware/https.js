@@ -6,11 +6,14 @@
  * @returns {*}
  */
 export default ({ isDev, req, redirect }) => {
+  console.log('isDev---------------------')
+  console.log(isDev)
   // 生產環境强制跳轉https
   if (!isDev && req) {
     const encrypted = req.headers['x-forwarded-proto'] === 'https' || req.connection.encrypted
 
     if (!encrypted) {
+      // return redirect(301, `https://${req.headers.host}${req.url}`)
       return redirect(301, `https://${req.headers.host}${req.url}`)
     }
   }

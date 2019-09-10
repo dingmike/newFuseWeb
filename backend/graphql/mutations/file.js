@@ -30,8 +30,8 @@ module.exports = {
       }
       console.log(data)
       console.log(user)
-      const { stream, mimetype, encoding } = await data.file
-
+      const { mimetype, encoding } = await data.file
+      const stream = await data.file.createReadStream() // 生成stream
       const uploadsDir = path.join(__dirname, '../..', 'uploads')
       let filename = intformat(flakeIdGen.next(), 'dec') + '.' + sharp.format.jpeg.id
       let fullpath = path.join(uploadsDir, filename)
