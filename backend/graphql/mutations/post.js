@@ -63,7 +63,7 @@ module.exports = {
           `
 
           transporter.sendMail({
-            from: 'noreply@mail.watosan.org',
+            from: '695898986@qq.com',
             to: recepient.email,
             subject: data.title,
             text: textversion(data.short) + additional,

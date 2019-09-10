@@ -23,35 +23,45 @@ module.exports = {
       }
     },
     async resolve (root, data, { user }) {
-      console.log(data)
-      console.log(user)
       if (!user) {
         throw new ForbiddenError('Unauthorized')
       }
-      console.log(data)
       console.log(user)
-      const { mimetype, encoding } = await data.file
-      const stream = await data.file.createReadStream() // 生成stream
+      const { createReadStream, mimetype, encoding } = await data.file
+      const stream = await createReadStream(data.file) // 生成stream
       const uploadsDir = path.join(__dirname, '../..', 'uploads')
       let filename = intformat(flakeIdGen.next(), 'dec') + '.' + sharp.format.jpeg.id
+      console.log('filename flakeId')
+      console.log(filename)
       let fullpath = path.join(uploadsDir, filename)
-
-      if (!fs.existsSync(uploadsDir)) fs.mkdir(uploadsDir)
+      if (!fs.existsSync(uploadsDir)) {
+        fs.mkdir(uploadsDir, function (err) {
+          console.log(err)
+          if (err) {
+            console.log(err)
+          } else {
+            console.log('creat done!')
+          }
+        })
+      }
       if (fs.existsSync(fullpath)) {
         filename = intformat(flakeIdGen.next(), 'dec') + '.' + sharp.format.jpeg.id
         fullpath = path.join(uploadsDir, filename)
       }
-
-      const writeStream = fs.createWriteStream(fullpath)
-
-      const pipeline = sharp()
+      console.log('filename---------------------------------')
+      console.log(filename)
+      console.log('fullpath--------------------------')
+      console.log(fullpath)
+      const writeStream = await fs.createWriteStream(fullpath)
+      console.log('writeStream----------------------------')
+      console.log(writeStream)
+      const pipeline = await sharp()
         .toFormat(sharp.format.jpeg, {
           progressive: true,
           chromaSubsampling: '4:4:4'
         })
         .clone()
-        .resize(1024, 1024)
-        .max()
+        .resize({ fit: 'inside' })
         .pipe(writeStream)
 
       stream.pipe(pipeline)
