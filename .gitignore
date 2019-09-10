@@ -23,3 +23,4 @@ jspm_packages/
 .nuxt/
 .backend/
 frontend/static/sw.js
+/backend/uploads

@@ -1,11 +1,11 @@
 <template>
-  <div class="app">
+ <!-- <div class="app">
     <section class="body">
       <section class="content">
         <nuxt/>
         <footer class="footer">
           <div class="copyrights">
-            <b>Watosan</b> (c) 2018, All rights reserved
+            <b>Fecs Tec</b> (c) 2016-{{ new Date().getFullYear() }}, All rights reserved
           </div>
         </footer>
       </section>
@@ -15,9 +15,9 @@
             <nuxt-link
               to="/"
               class="app-logo__link">
-              <span class="app-logo__text">Watosan</span>
+              <span class="app-logo__text">Fecs Tec</span>
             </nuxt-link>
-            <span class="app-logo__description">Another one developer's blog</span>
+            <span class="app-logo__description">Fecs Tec Home Website</span>
           </div>
         </div>
         <div class="aside-block">
@@ -59,6 +59,47 @@
         </div>
       </aside>
     </section>
+
+  </div>-->
+  <div class="layout">
+    <Layout>
+      <Header>
+        <Menu mode="horizontal" theme="dark" active-name="1">
+          <div class="layout-logo"></div>
+          <div class="layout-nav">
+            <MenuItem name="1">
+              <Icon type="ios-navigate"></Icon>
+              Item 1
+            </MenuItem>
+            <MenuItem name="2">
+              <Icon type="ios-keypad"></Icon>
+              Item 2
+            </MenuItem>
+            <MenuItem name="3">
+              <Icon type="ios-analytics"></Icon>
+              Item 3
+            </MenuItem>
+            <MenuItem name="4">
+              <Icon type="ios-paper"></Icon>
+              Item 4
+            </MenuItem>
+          </div>
+        </Menu>
+      </Header>
+      <Content :style="{padding: '0 50px'}">
+        <Breadcrumb :style="{margin: '20px 0'}">
+          <BreadcrumbItem>Home</BreadcrumbItem>
+          <BreadcrumbItem>Components</BreadcrumbItem>
+          <BreadcrumbItem>Layout</BreadcrumbItem>
+        </Breadcrumb>
+        <Card>
+          <div style="min-height: 200px;">
+            Content
+          </div>
+        </Card>
+      </Content>
+      <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
+    </Layout>
   </div>
 </template>
 
@@ -275,6 +316,33 @@ export default {
   .copyrights {
     margin: 10px;
     font-size: 14px;
+    text-align: center;
+  }
+
+  /**/
+  .layout{
+    border: 1px solid #d7dde4;
+    background: #f5f7f9;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .layout-logo{
+    width: 100px;
+    height: 30px;
+    background: #5b6270;
+    border-radius: 3px;
+    float: left;
+    position: relative;
+    top: 15px;
+    left: 20px;
+  }
+  .layout-nav{
+    width: 420px;
+    margin: 0 auto;
+    margin-right: 20px;
+  }
+  .layout-footer-center{
     text-align: center;
   }
 </style>

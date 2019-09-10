@@ -38,7 +38,9 @@ module.exports = {
       { src: 'https://www.google.com/recaptcha/api.js' }
     ]
   },
-
+  plugins: [
+    { src: '~plugins/iview', ssr: true }
+  ],
   css: [
     { src: 'highlight.js/styles/docco.css', lang: 'css' }
   ],
@@ -114,7 +116,7 @@ module.exports = {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          // loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
       }

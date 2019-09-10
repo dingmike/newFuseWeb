@@ -163,7 +163,7 @@ const run = async () => {
       figlet.textSync('Watosan', { horizontalLayout: 'full' })
     )
   )
-  console.log(chalk.green('🚀 Watosan blog installation wizard'))
+  console.log(chalk.green('🚀 Mike blog installation wizard'))
   console.log(chalk.green('🚀 It will create .env file for you\n'))
 
   let env = {}
