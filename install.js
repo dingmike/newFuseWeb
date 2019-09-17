@@ -68,6 +68,18 @@ const questions = [
     message: 'MongoDB host'
   },
   {
+    name: 'MONGODB_USERNAME',
+    type: 'input',
+    default: 'username',
+    message: 'MongoDB User name'
+  },
+  {
+    name: 'MONGODB_PASSWORD',
+    type: 'input',
+    default: 'userPassword',
+    message: 'MongoDB User password'
+  },
+  {
     name: 'MONGODB_PORT',
     type: 'input',
     default: '27017',
