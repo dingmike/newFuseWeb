@@ -76,7 +76,7 @@ const questions = [
   {
     name: 'MONGODB_NAME',
     type: 'input',
-    default: 'watosan',
+    default: 'fusekj',
     message: 'MongoDB database name'
   },
   {
@@ -160,10 +160,10 @@ const run = async () => {
   clear()
   console.log(
     chalk.green(
-      figlet.textSync('Watosan', { horizontalLayout: 'full' })
+      figlet.textSync('FuseKj', { horizontalLayout: 'full' })
     )
   )
-  console.log(chalk.green('🚀 Mike blog installation wizard'))
+  console.log(chalk.green('🚀 Fusekj installation wizard'))
   console.log(chalk.green('🚀 It will create .env file for you\n'))
 
   let env = {}
