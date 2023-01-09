@@ -43,7 +43,7 @@
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-jwt": "^5.3.1",
-    "feed": "^2.0.4",
+    "feed": "^4.2.2",
     "figlet": "^1.2.1",
     "flake-idgen": "^1.1.2",
     "graphql": "^14.5.4",
